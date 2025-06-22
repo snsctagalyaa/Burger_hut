@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff3e0;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+      margin-bottom: 30px; /* One line of spacing after header */
+      color: #333;
+    }
+
+    .burger-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* Space between burger items */
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .burger {
+      text-align: center;
+      background-color: #fff8ed;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      width: 300px;
+    }
+
+    .burger:hover {
+      transform: scale(1.03);
+    }
+
+    .burger img {
+      width: 280px;
+      height: 220px;
+      border-radius: 10px;
+      margin-bottom: 16px; /* One line of spacing after image */
+      cursor: pointer;
+    }
+
+    .burger h2 {
+      margin: 10px 0 5px;
+      color: #d32f2f;
+    }
+
+    .burger p {
+      line-height: 1.6;
+      margin: 0 auto;
+      width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Delicious Burgers</h1>
+
+  <div class="burger-container">
+    <div class="burger">
+      <h2>Classical Cheeseburger</h2>
+      <a href="cheeseburger.html"><img src="cheese.jpg" alt="Cheeseburger"></a>
+      <p>Classic juicy beef patty topped with melting cheese and fresh veggies.</p>
+    </div>
+
+    <div class="burger">
+      <h2>Veggie Delight</h2>
+      <a href="veggie.html"><img src="veggie.jpg" alt="Veggie Delight"></a>
+      <p>A healthy and delicious burger made with fresh veggies and herbs.</p>
+    </div>
+
+    <div class="burger">
+      <h2>Spicy BBQ</h2>
+      <a href="spicy.html"><img src="spicy.jpg" alt="Spicy BBQ"></a>
+      <p>Hot and tangy BBQ burger with a kick of spice and flavor.</p>
+    </div>
+  </div>
+</body>
+<script src="feedback.js"></script>
+</html>
+

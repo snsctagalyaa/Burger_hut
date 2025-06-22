@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe0b2, #ffcc80);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .payment-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      transition: 0.4s ease-in-out;
+    }
+
+    .payment-container h2 {
+      color: #d84315;
+      margin-bottom: 20px;
+    }
+
+    .upi-logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background-color: #ffab91;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: white;
+    }
+
+    .amount-btn {
+      background-color: #43a047;
+      color: white;
+      font-size: 22px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .amount-btn:hover {
+      background-color: #388e3c;
+    }
+
+    .paid-message {
+      display: none;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #2e7d32;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .thanks {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #4e342e;
+      font-weight: bold;
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container" id="paymentBox">
+    <div class="upi-logo">₹</div>
+    <h2>Pay with UPI</h2>
+    <img src="veggie.jpg" width="300" height="210">
+    <p>Veggie Delight</p>
+    <button class="amount-btn" onclick="completePayment()">Pay ₹120</button>
+    <div class="paid-message" id="paidMessage">✅ Payment Successful</div>
+    <div class="thanks" id="thanksMessage">Thanks for ordering!<br>Your hunger ends here 😋</div>
+  </div>
+
+  <script>
+    function completePayment() {
+      document.getElementById("paidMessage").style.display = "block";
+      document.getElementById("thanksMessage").style.display = "block";
+    }
+  </script>
+</body>
+</html>
